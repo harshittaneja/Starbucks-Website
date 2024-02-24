@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+	
+    font-family: 'Poppins', sans-serif;
+
+}
+body{
+	animation: transitionIn 2s ;
+}
+@keyframes transitionIn{
+	from {
+
+opacity: 0
+	}
+	to{
+opacity: 1;
+
+	}
+
+} 
+
+section{
+
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	padding: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header .logo{
+	position: relative;
+	max-width: 80px;
+}
+header ul{
+	position: relative;
+	display: flex;
+
+}
+header ul li{
+	list-style-type: none;
+}
+header ul li a{
+	display: inline-block;
+	color: black;
+	font-weight: 400;
+	margin-left: 40px;
+	text-decoration: none;
+}
+.content{
+	position: relative;
+	width: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.content .textBox{
+	position: relative;
+	max-width: 600px;
+}
+.content .textBox h2{
+	color: #fff;
+	font-size: 4em;
+	line-height: 1.5em;
+	font-weight: 900;
+	text-transform: uppercase;
+
+}
+.content .textBox h2 span{
+	font-size: 2em;
+
+}
+.content .textBox p{
+	color: #fff;
+}
+.content .textBox a{
+	display: inline-block;
+	margin-top: 20px;
+	padding: 8px 20px;
+	background: #fff;
+	color: black;
+	border-radius: 40px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+
+
+@media(max-width: 991px){
+	section{
+		padding: 40px;
+		padding-bottom: 150px;
+	}
+	header{
+		padding: 20px 40px;
+	}
+	header .logo{
+		position: relative;
+		max-width: 60px;
+	}
+	header ul{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #fff;
+		z-index: 1;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		transition: 0.2s;
+		visibility: hidden;
+		opacity: 0;
+	}
+	header ul.active{
+		visibility: visible;
+		opacity: 1;
+	}
+	header ul li a{
+		display: inline-block;
+		font-weight: 400;
+		margin-left: 0;
+		text-decoration: none;
+		font-size: 2em;
+		margin: 10px 0;
+	}
+	header ul li a:hover{
+		color: #ed0223;
+	}
+	.toggleMenu{
+		position: relative;
+		width: 40px;
+		height: 60px;
+		background: url(toggle.png);
+		background-position: center;
+		background-size: 30px;
+		background-repeat: no-repeat;
+		z-index: 2;
+		cursor: pointer;
+	}
+	.toggleMenu.active{
+		background: url(close.png);
+		background-position: center;
+		background-size: 25px;
+		background-repeat: no-repeat;
+		filter: invert(1);
+	}
+	.content{
+		flex-direction: column;
+		margin-top: 80px;
+	}
+	.content .textBox{
+		position: relative;
+		max-width: 100%;
+		padding-right: 20px;
+	}
+	.content .textBox h2{
+		font-size: 3em;
+	}
+	.content .textBox a{
+		font-size: 14px;
+		padding: 8px 15px;
+	}
+	.content .imgBox{
+		width: 100%;
+		display: flex;
+		padding-right: 0;
+		margin-top: 50px;
+		justify-content: center;
+	}
+	.content .imgBox img{
+		max-width: 150px;
+	}
+
+}
+.sliding{
+width: 250px;
+height: 380px;
+transition: 500ms;
+
+}
+.sliders{
+  list-style-type none;
+}
+.sliders li{
+  display: inline-block;
+  margin: 2px;
+
+}
+.sliders li img{
+  width: 40px;
+  height:50px;
+  position: relative;
+}
+.sliders li img:hover{
+transform: translateY(-25%);
+transition: 500ms;
+}
+ 
+.circle{
+	position: absolute;
+	top:0;
+	left:0;
+    clip-path: circle(640px  at right 800px);
+	width:100%;
+	height:100%;
+	background-color: #017143;
+}
+
+}
+#buybutton{
+border: none;
+width: 300px;
+height: 40px;
+border-radius: 20px;
+outline-style: none;
+background-color:#017143; 
+}
+#buybutton:focus {
+  outline:none;
+  box-shadow: none;
+}
+#buybutton:hover{
+background-color:#B0B0B0 ;
+color: white;
+}
+.startext{
+color: #017143;
+font-size: 58px;
+}
